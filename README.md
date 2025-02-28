@@ -6,16 +6,27 @@ Este proyecto está organizado de la siguiente manera:
 
 ```
 C1_GRUPO1/
-│── data/                      # Contiene los datos utilizados en el análisis
-│   │── wine_data.db            # Base de datos SQLite con los datos limpios
-│   │── winequality-red.csv     # Datos de vinos tintos
-│   │── winequality-white.csv   # Datos de vinos blancos
-│   │── winequality.names       # Descripción de los datos
+│── data/                                           # Contiene los datos utilizados en el análisis
+│   │── wine_data.db                                # Base de datos SQLite con los datos limpios
+│   │── winequality-red.csv                         # Datos de vinos tintos
+│   │── winequality-white.csv                       # Datos de vinos blancos
+│   │── winequality.names                           # Descripción de los datos
+|   |── consulta_Sql_transformada.json              # Exportación de consulta SQL a dataFrame y después a json
+|   |── df_with_nparray.json                        # Exportación de dataFrame con columna de numpy aleatorios a json 
+|   |── df_with_nparray_float.json                  # Igual que la anterior pero convertida dicha columna a float
+|   |── df_with_nparray_float_timestamp.json        # Exportación de dataFrame con columna de fechas aleatorias a json
+|   |── df_with_nparray_float_timestamp_iso.json    # Igual que la anterior pero convertida dicha columna a formato ISO
 │
-│── notebooks/                 # Contiene los notebooks de análisis
+│── img/                        # Contiene las capturas de pantalla utilizadas en el notebook
+│   │── df_float.png            # Captura de pantalla de df_with_nparray_float.json
+│   │── df_nparray.png          # Captura de pantalla de df_with_nparray.json
+│   │── df_timestamp_iso.png    # Captura de pantalla de df_with_nparray_float_timestamp_iso.json 
+│   │── df_timestamp.png        # Captura de pantalla de df_with_nparray_float_timestamp.json
+│
+│── notebooks/                  # Contiene los notebooks de análisis
 │   │── main_notebook.ipynb     # Notebook principal con todo el proceso
 │
-│── src/                       # Código fuente del proyecto
+│── src/                        # Código fuente del proyecto
 │   │── E01_download_data.py    # Descarga de datos
 │   │── E02_combine_data.py     # Combinación de datos
 │   │── E03_clean_data.py       # Limpieza de datos
@@ -24,11 +35,12 @@ C1_GRUPO1/
 │   │── E06_export_json.py      # Exportación de datos a JSON
 │   │── E07_eda_wine_quality.py # Análisis exploratorio de calidad del vino
 │
-│── utils/                     # Funciones auxiliares (vacío)
+│── utils/                      # Funciones auxiliares (vacío)
 │   │── utils.py                # Funciones de apoyo
 │
 │── LICENSE                    # Licencia del proyecto
-│── README.md                   # Documentación general del proyecto
+│── README.md                  # Documentación general del proyecto
+│── requirements.txt           # Paquetes necesarios, se ha ejecutado con python Python 3.12.9
 ```
 
 ## Flujo de trabajo
@@ -117,7 +129,5 @@ De cara a una potencial insercion en una base de datos noSQL como `mongoDB`, pod
   - Realizad un commit final con el mensaje: **ENTREGA FINAL**.
 
 ---
-
-¡Buena suerte con el proyecto! 😊
 
 
